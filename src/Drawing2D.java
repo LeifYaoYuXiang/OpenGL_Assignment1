@@ -52,7 +52,7 @@ public class Drawing2D extends JPanel {
 		
 		
 		
-		// Remove the comments for Explicit line and test it ,
+		 //Remove the comments for Explicit line and test it ,
 		/*
 		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
 		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); // 200
@@ -67,47 +67,52 @@ public class Drawing2D extends JPanel {
 		// */
 
 		// Remove the comments for Implicit line and test it
-		/*
-		ImplicitLine FirstLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
-		ImplicitLine ThirdLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		ImplicitLine FourthLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
+		
+//		ImplicitLine FirstLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+//		ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
+//		ImplicitLine ThirdLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+//		ImplicitLine FourthLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
+//
+//		FirstLine.drawLine(g);
+//		SecondLine.drawLine(g);
+//		ThirdLine.drawLine(g);
+//		FourthLine.drawLine(g);
+		
+		//Remove the comments for Parametric line and test it
+		
+		//ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+		//ParametricLine SecondLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
+		//ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+		//ParametricLine FourthLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
 
-		FirstLine.drawLine(g);
-		SecondLine.drawLine(g);
-		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);
-
-		// Remove the comments for Parametric line and test it
-		/*
-		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
-		ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		ParametricLine FourthLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
-
-		FirstLine.drawLine(g);
-		SecondLine.drawLine(g);
-		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);
-		// */
+		//FirstLine.drawLine(g);
+		//SecondLine.drawLine(g);
+		//ThirdLine.drawLine(g);
+		//FourthLine.drawLine(g);
+		
 
 		// Remove the comments for an example of square using Parametric lines
-		/*
-		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
-		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
-		ParametricLine ThirdLine = new ParametricLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
-		ParametricLine FourthLine = new ParametricLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
-
-		FirstLine.drawLine(g);
-		SecondLine.drawLine(g);
-		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);
+		
+//		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
+//		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
+//		ParametricLine ThirdLine = new ParametricLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
+//		ParametricLine FourthLine = new ParametricLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
+//
+//		FirstLine.drawLine(g);
+//		SecondLine.drawLine(g);
+//		ThirdLine.drawLine(g);
+//		FourthLine.drawLine(g);
 		// */
 
-		ParametricTriangle MyFirstTriangle = new ParametricTriangle(new Point3f(200, 0, 0), new Point3f(400,200, 0),
-				new Point3f(200, 370, 0));
+		ParametricTriangle MyFirstTriangle = new ParametricTriangle(
+											new Point3f(200, 0, 0), 
+											new Point3f(400,200, 0),
+											new Point3f(200, 370, 0));
 
-		 MyFirstTriangle.drawTriangle(g);// */
+		 MyFirstTriangle.drawTriangle(g);
+		 
+		 
+		 // */
 		
 		//insert your house drawings  here 
 

@@ -17,7 +17,14 @@ public class ParametricLine {
 
 	// Implement in Parametric form , and comment what it does 
 	public void drawLine(Graphics g) {
-		 
+		  Point3f temp=new Point3f();
+		  for(double t=0.0;t<=1;t=t+0.01) {
+			  temp.x=(float) (this.Start.x+(this.End.x-this.Start.x)*t);
+			  temp.y=(float) (this.Start.y+(this.End.y-this.Start.y)*t);
+			  System.out.println("<"+temp.x+"------"+temp.y+">");
+			  this.setPixel(g, (int)temp.x, (int)temp.y);
+		  }
+		  
 			// setPixel(g, (int) CurrentPoint.x, (int) CurrentPoint.y);
 	 
 	}
