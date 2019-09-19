@@ -3,7 +3,14 @@ package GraphicsObjects;
 
 
 public class Vector3f {
-
+	/*
+	 * Author:Leif
+	 * Date:2019/09/19
+	 * BJUT Number:17372323
+	 * UCD Number:17205995
+	 * 
+	 * */
+	
 	public float x=0;
 	public float y=0;
 	public float z=0;
@@ -22,7 +29,15 @@ public class Vector3f {
 		this.z = z;
 	}
 	
-	 //implement Vector plus a Vector  and comment what the method does  
+	/*
+	 * Goal:
+	 * 	use this vector plus a new vector
+	 * Mechanism:
+	 * 	use this vector's x-position plus Additonal's vector----->x0
+	 * 	use this vector's y-position plus Additonal's vector----->y0
+	 * 	use this vector's z-position plus Additonal's vector----->z0
+	 * 	use (x0,y0,z0) as this new vector 
+	 * */ 
 	public Vector3f PlusVector(Vector3f Additonal) 
 	{ 
 		this.x=Additonal.x+this.x;

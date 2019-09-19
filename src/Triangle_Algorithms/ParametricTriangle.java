@@ -30,10 +30,10 @@ public class ParametricTriangle {
 		System.out.println("Y_Min:"+y_min+"-----"+"Y:Max:"+y_max);
 		
 		
-		float A_BC=Math.abs(this.Distance(A, B, C));
+		float A_BC=this.Distance(A, B, C);
 		System.out.println("A_BC:"+A_BC);
 		
-		float C_AB=Math.abs(this.Distance(C, A, B));
+		float C_AB=this.Distance(C, A, B);
 		System.out.println("C_AB:"+C_AB);
 		
 		

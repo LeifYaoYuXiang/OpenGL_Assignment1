@@ -5,9 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import GraphicsObjects.Point3f;
-import Line_Algorithms.ExplicitLine;
-import Line_Algorithms.ImplicitLine;
-import Line_Algorithms.ParametricLine;
 import Triangle_Algorithms.ParametricTriangle;
 
 /*
@@ -32,7 +29,7 @@ public class Drawing2D extends JPanel {
 	{
 		int width = getWidth(); // width of window in pixels
 		int height = getHeight(); // height of window in pixels
-
+		System.out.println("Width:"+width+"------"+"Height:"+height);
 		// as swing starts at 0 , 0 , will need to modify drawing
 
 		super.paintComponent(g); // call superclass to make panel display

@@ -5,6 +5,8 @@ public class Point3f {
 	/*
 	 * Author:Leif
 	 * Date:2019/09/17
+	 * BJUT Number:17372323
+	 * UCD Number:17205995
 	 * 
 	 * */
 	
@@ -31,7 +33,8 @@ public class Point3f {
 		this.z = z;
 	}
 	
-	// sometimes for different algorithms we will need to address the point using positions 0 1 2 
+	// sometimes for different algorithms we will need to address the point using positions 0 1 2
+	//
 	public float getPostion(int postion)
 	{
 		switch(postion)
@@ -49,7 +52,15 @@ public class Point3f {
     }
 
 
-	 //implement Point plus a Vector and comment what the method does 
+	
+	/*
+	 * Goal:
+	 * 	let this point add another vector and change its position
+	 * Mechanisms: 
+	 * 	use its x-position plus Additonal's x-position; 
+	 * 	use its y-position plus Additonal's y-position;
+	 * 	use its z-position plus Additonal's z-position; 
+	 * */			
 	public Point3f PlusVector(Vector3f Additonal) {
 		this.x=this.x+Additonal.x;
 		this.y=this.y+Additonal.y;
@@ -58,7 +69,14 @@ public class Point3f {
 		return this; 
 	} 
 	
-	 //implement Point minus a Vector and comment what the method does 
+	/*
+	 * Goal:
+	 * 	let this point minus another vector and change its position
+	 * Mechanism:
+	 * 	use its x-position minus Minus's x-position
+	 * 	use its y-position minus Minus's y-position
+	 * 	use its z-position minus Minus's z-position
+	 * */ 
 	public Point3f MinusVector(Vector3f Minus) { 
 		this.x=this.x-Minus.x;
 		this.y=this.y-Minus.y;
@@ -68,18 +86,19 @@ public class Point3f {
 	}
 	
 	
-	/// implement Point - Point  and comment what the method does  
+	/*
+	 * Goal:
+	 * 	let this point minus another point and get one vector
+	 * Mechanism:
+	 * 	use its x-position minus Minus's x-position---->X0
+	 * 	use its y-position minus Minus's y-position---->y0
+	 * 	use its z-position minus Minus's z-position---->z0
+	 * 	use (x0,y0,z0) as a new vector
+	 * */
 	public Vector3f MinusPoint(Point3f Minus) { 
 		Vector3f v=new Vector3f(this.x-Minus.x,this.y-Minus.y,this.z-Minus.z);
 		return v;
 	}
-	
-	 
-	 // Remember point + point  is not defined so we not write a method for it. 
-	
-	
-	 
-	  
 	
 }
 

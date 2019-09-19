@@ -1,8 +1,7 @@
 package Line_Algorithms;
 
-import java.awt.Color;
-import java.awt.Graphics;
 
+import java.awt.Graphics;
 import GraphicsObjects.Point3f;
 
 public class ExplicitLine {

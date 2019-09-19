@@ -1,10 +1,7 @@
 package Line_Algorithms;
 
-import java.awt.Color;
 import java.awt.Graphics;
-
 import GraphicsObjects.Point3f;
-import GraphicsObjects.Vector3f;
 
 public class ImplicitLine {
 
