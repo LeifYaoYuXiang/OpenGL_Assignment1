@@ -33,9 +33,9 @@ public class Vector3f {
 	 * Goal:
 	 * 	use this vector plus a new vector
 	 * Mechanism:
-	 * 	use this vector's x-position plus Additonal's vector----->x0
-	 * 	use this vector's y-position plus Additonal's vector----->y0
-	 * 	use this vector's z-position plus Additonal's vector----->z0
+	 * 	use this vector's x-position plus Additonal's x-position----->x0
+	 * 	use this vector's y-position plus Additonal's y-position----->y0
+	 * 	use this vector's z-position plus Additonal's z-position----->z0
 	 * 	use (x0,y0,z0) as this new vector 
 	 * */ 
 	public Vector3f PlusVector(Vector3f Additonal) 
@@ -46,7 +46,15 @@ public class Vector3f {
 		return this;
 	} 
 	
-	 //implement Vector minus a Vector  and comment what the method does  
+	/*
+	 * Goal:
+	 * 	use this vector minus a new vector
+	 * Mechanism:
+	 * 	use this vector's x-position minus Minus's x-position------>x0
+	 * 	use this vector's y-position minus Minus's y-position------>y0
+	 * 	use this vector's z-position minus Minus's z-position------>z0
+	 * 	use (x0,y0,z0) as this new vector
+	 * */  
 	public Vector3f MinusVector(Vector3f Minus) 
 	{ 
 		this.x=this.x-Minus.x;
@@ -56,15 +64,31 @@ public class Vector3f {
 		return this;
 	}
 	
-	//implement Vector plus a Point and comment what the method does  
+	/*
+	 * Goal:
+	 * 	use this vector add another point to get a new point
+	 * Mechanism:
+	 * 	use this vector's x-position add Additonal's x-position----->x0
+	 * 	use this vector's y-position add Additonal's y-position----->y0
+	 * 	use this vector's z-position add Additonal's z-position----->z0
+	 * 	use (x0,y0,z0) as a new point
+	 * */  
 	public Point3f PlusPoint(Point3f Additonal) 
 	{ 
 		Point3f p=new Point3f(this.x=Additonal.x+this.x,this.y=Additonal.x+this.y,this.z=Additonal.z+this.z);
 		return p;
 	} 
-	//Do not implement Vector minus a Point as it is undefined 
 	
-	//Implement a Vector * Scalar  and comment what the method does    ( we wont create Scalar * Vector due to expediency ) 
+	
+	/*
+	 * Goal:
+	 * 	magnify or narrow this vector in one certain scale
+	 * Mechanism:
+	 * 	use this vector's x-position to multiply one constant------>x0;
+	 * 	use this vector's y-position to multiply one constant------>y0;
+	 * 	use this vector's z-position to multiply one constant------>z0;
+	 * 	use (x0,y0,z0) as a this vector
+	 * */ 
 	public Vector3f byScalar(float scale )
 	{
 		this.x=this.x*scale;
@@ -74,7 +98,12 @@ public class Vector3f {
 		return this;
 	}
 	
-	//implement returning the negative of a Vector  and comment what the method does  
+	/*
+	 * Goal:
+	 * 	change the direction of the vector
+	 * Mechanism:
+	 * 	let the x,y,z position to be opposite
+	 * */ 
 	public Vector3f  NegateVector()
 	{
 		 this.x=-this.x;
@@ -83,13 +112,24 @@ public class Vector3f {
 		 return this;
 	}
 	
-	//implement getting the length of a Vector    and comment what the method does
+	/*
+	 * Goal:
+	 * 	calculate the length of one vector
+	 * Mechanism:
+	 * 	calculate the following:
+	 * 		Math.sqrt(x*x+y*y+z*z); whereas x,y,z stands for the position of the original vector
+	 * */
 	public float length()
 	{
 	   return (float) Math.sqrt(x*x+y*y+z*z);
 	}
 	
-	//implement getting the Normal  of a Vector   and comment what the method does
+	/*
+	 * Goal:
+	 * 	Get a vector which in the same direction of the original vector, however whose length is 1
+	 * Mechanism:
+	 * 	Use the x,y,z position divide the length of the original vector
+	 * */
 	public Vector3f Normal()
 	{
 		if(this.length()!=0) {
@@ -105,14 +145,28 @@ public class Vector3f {
 		
 	} 
 	
-	//implement getting the dot product of Vector.Vector and comment what the method does 
-
+	
+	/*
+	 * Goal:
+	 * 	calculate the dot product of this vector and another vector
+	 * Mechanism:
+	 * 	calculate the following:
+	 * 		this.x*v.x+this.y*v.y+this.z*v.z
+	 * */
 	public float dot(Vector3f v)
 	{ 
 	  return (this.x*v.x+this.y*v.y+this.z*v.z);
 	}
 	
-	//implement getting the cross product of Vector X Vector and comment what the method does  
+	/*
+	 * Goal:
+	 * 	calculate the cross product of this vector and another product
+	 * Mechanism:
+	 * 	calculate the determinant of the following matrix
+	 * 		|i        j       k  | 
+	 * 		|this.x this.y this.z|
+	 * 		|v.x     v.y     v.z |	
+	 * */
 	public Vector3f cross(Vector3f v)  
 	{ 
 		Vector3f crossV=new Vector3f();
