@@ -38,10 +38,20 @@ public class Drawing2D extends JPanel {
 
 		g.setColor(Color.BLACK);
 		
-		//line test code 
+		/*
+		 * Goal:
+		 * 	Test the line drawing
+		 * Mechanism:
+		 * 	Draw the following line and test does they work well
+		 * */
 		
+		//Draw a line in a explicit way
 		//ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		//ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); // 200
+		
+		//Draw a line in a implicit way
+		//ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); 
+		
+		//Draw a line in a parametric way
 		//ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
 		
 		//FirstLine.drawLine(g);
@@ -50,10 +60,13 @@ public class Drawing2D extends JPanel {
 		
 		
 		
-		 //Remove the comments for Explicit line and test it ,
+		/*
+		 * Goal:
+		 * 	Test the line drawing (Explicit)
+		 * */
 		/*
 		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); // 200
+		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); 
 		ExplicitLine ThirdLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
 		ExplicitLine FourthLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
 
@@ -61,116 +74,78 @@ public class Drawing2D extends JPanel {
 		SecondLine.drawLine(g);
 		ThirdLine.drawLine(g);
 		FourthLine.drawLine(g);
+		*/
 
-		// */
-
-		// Remove the comments for Implicit line and test it
 		
-		//ImplicitLine FirstLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		//ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
-		//ImplicitLine ThirdLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		//ImplicitLine FourthLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
+		/*
+		 * Goal:
+		 * 	Test the line drawing (Implicit)
+		 * */
+		/*
+		ImplicitLine FirstLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+		ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
+		ImplicitLine ThirdLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+		ImplicitLine FourthLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
 
-		//FirstLine.drawLine(g);
-		//SecondLine.drawLine(g);
-		//ThirdLine.drawLine(g);
-		//FourthLine.drawLine(g);
+		FirstLine.drawLine(g);
+		SecondLine.drawLine(g);
+		ThirdLine.drawLine(g);
+		FourthLine.drawLine(g);
+		*/
 		
-		//Remove the comments for Parametric line and test it
+		/*
+		 * Goal:
+		 * 	Test the line drawing (Parametric)
+		 * */
+		/*
+		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
+		ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+		ParametricLine FourthLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
 		
-		//ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		//ParametricLine SecondLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
-		//ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		//ParametricLine FourthLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
+		FirstLine.drawLine(g);
+		SecondLine.drawLine(g);
+		ThirdLine.drawLine(g);
+		FourthLine.drawLine(g);
+		*/
+		
 
-		//FirstLine.drawLine(g);
-		//SecondLine.drawLine(g);
-		//ThirdLine.drawLine(g);
-		//FourthLine.drawLine(g);
+		/*
+		 * Goal:
+		 * 	Try to draw a rectangle by using Parametric Way
+		 * */
 		
+		/*
+		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
+		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
+		ParametricLine ThirdLine = new ParametricLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
+		ParametricLine FourthLine = new ParametricLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
 
-		// Remove the comments for an example of square using Parametric lines
+		FirstLine.drawLine(g);
+		SecondLine.drawLine(g);
+		ThirdLine.drawLine(g);
+		FourthLine.drawLine(g);
+		 */
 		
-//		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
-//		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
-//		ParametricLine ThirdLine = new ParametricLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
-//		ParametricLine FourthLine = new ParametricLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
-//
-//		FirstLine.drawLine(g);
-//		SecondLine.drawLine(g);
-//		ThirdLine.drawLine(g);
-//  	FourthLine.drawLine(g);
-		// */
+		
+		/*
+		 * Goal:
+		 * 	Test Parametric Triangle Drawing
+		 * */
+		/*
+		ParametricTriangle MyFirstTriangle = new ParametricTriangle(
+											new Point3f(200, 0, 0), 
+											new Point3f(400,200, 0),
+											new Point3f(200, 370, 0));
 
-//		ParametricTriangle MyFirstTriangle = new ParametricTriangle(
-//											new Point3f(200, 0, 0), 
-//											new Point3f(400,200, 0),
-//											new Point3f(200, 370, 0));
-//
-//		 MyFirstTriangle.drawTriangle(g);
+		MyFirstTriangle.drawTriangle(g);
+		 */
+		
 		 
-		
-		
-		
-//		 ParametricLine pl1=new ParametricLine(new Point3f(0,0,0),new Point3f(200,0,0));
-//		 pl1.drawLine(g);
-//		 ParametricLine pl2=new ParametricLine(new Point3f(200,200,0),new Point3f(200,0,0));
-//		 pl2.drawLine(g);
-//		 ParametricLine pl3=new ParametricLine(new Point3f(0,0,0),new Point3f(0,200,0));
-//		 pl3.drawLine(g);
-//		 ParametricLine pl4=new ParametricLine(new Point3f(0,200,0),new Point3f(200,200,0));
-//		 pl4.drawLine(g);
-//		 
-//		 ParametricLine pl5=new ParametricLine(new Point3f(200,0,0),new Point3f(240,30,0));
-//		 pl5.drawLine(g);
-//		 ParametricLine pl6=new ParametricLine(new Point3f(240,30,0),new Point3f(240,230,0));
-//		 pl6.drawLine(g);
-//		 ParametricLine pl7=new ParametricLine(new Point3f(200,200,0),new Point3f(240,230,0));
-//		 pl7.drawLine(g);
-//		 
-//		 ParametricLine pl8=new ParametricLine(new Point3f(100,0,0),new Point3f(100,50,0));
-//		 pl8.drawLine(g);
-//		 ParametricLine pl9=new ParametricLine(new Point3f(80,0,0),new Point3f(80,50,0));
-//		 pl9.drawLine(g);
-//		 ParametricLine pl10=new ParametricLine(new Point3f(120,0,0),new Point3f(120,50,0));
-//		 pl10.drawLine(g);
-//		 
-//		 ParametricLine pl11=new ParametricLine(new Point3f(80,50,0),new Point3f(120,50,0));
-//		 pl11.drawLine(g);
-//		 ParametricLine pl12=new ParametricLine(new Point3f(80,25,0),new Point3f(120,25,0));
-//		 pl12.drawLine(g);
-//		 
-//		ParametricTriangle tr1 = new ParametricTriangle(
-//													new Point3f(100, 280, 0),
-//													new Point3f(0, 200, 0), 
-//													new Point3f(200,200, 0)
-//													);
-//	 	tr1.drawTriangle(g);
-//		
-//		ParametricTriangle tr2 = new ParametricTriangle(
-//										new Point3f(100, 280, 0), 
-//										new Point3f(240, 230, 0),
-//										new Point3f(200,200, 0)
-//										);
-//		tr2.drawTriangle(g);
-//		
-//		ParametricTriangle tr3 = new ParametricTriangle(
-//				new Point3f(60,160,0), 
-//				new Point3f(60,180,0),
-//				new Point3f(80,180,0));
-//		tr3.drawTriangle(g);
-//		
-//		ParametricTriangle tr4 = new ParametricTriangle(
-//				new Point3f(80,160, 0), 
-//				new Point3f(80,180, 0),
-//				new Point3f(60,160, 0));
-//		tr4.drawTriangle(g);
-//		
-////		ParametricTriangle tr4 = new ParametricTriangle(
-////				new Point3f(100, 280, 0), 
-////				new Point3f(200,200, 0),
-////				new Point3f(240, 230, 0));
-////		tr4.drawTriangle(g);
+		/*
+		 * Goal:
+		 * 	Draw a house using following methods
+		 * */
 		drawBackground(g);
 		drawHousebody(g);
 		drawHouseRoof(g);
@@ -196,6 +171,7 @@ public class Drawing2D extends JPanel {
 		
 	}
 	
+
 	public static void drawBackground(Graphics g) {
 		 g.setColor(new Color(135,206,235));
 		 
@@ -209,9 +185,10 @@ public class Drawing2D extends JPanel {
 		 pl.drawLine(g);
 	}
 	
+
 	public static void drawHousebody(Graphics g) {
-		g.setColor(new Color(178,34,34));
-		
+		// draw the shape of the front face of house
+		g.setColor(Color.black);
 		ParametricLine pl=new ParametricLine(new Point3f(0,0,0),new Point3f(200,0,0));
 		pl.drawLine(g);
 		ParametricLine p2=new ParametricLine(new Point3f(0,0,0),new Point3f(0,200,0));
@@ -220,13 +197,17 @@ public class Drawing2D extends JPanel {
 		p3.drawLine(g);
 		ParametricLine p4=new ParametricLine(new Point3f(200,0,0),new Point3f(200,200,0));
 		p4.drawLine(g);
-		for(int y=0;y<200;y++) {
-			for(int x=0;x<200;x++) {
+		
+		// paint the front face of the house
+		g.setColor(new Color(178,34,34));
+		for(int y=1;y<200;y++) {
+			for(int x=1;x<200;x++) {
 				g.fillRoundRect(x + 500, 500 - y, 1, 1,1, 0);
 			}
 		}
 		
-		g.setColor(new Color(139,0,0));
+		// draw the shape of the side face of house
+		g.setColor(Color.black);
 		ParametricLine p5=new ParametricLine(new Point3f(200,0,0),new Point3f(260,30,0));
 		p5.drawLine(g);
 		ParametricLine p6=new ParametricLine(new Point3f(260,30,0),new Point3f(260,230,0));
@@ -234,8 +215,10 @@ public class Drawing2D extends JPanel {
 		ParametricLine p7=new ParametricLine(new Point3f(200,200,0),new Point3f(260,230,0));
 		p7.drawLine(g);
 		
-		for(int y=0;y<230;y++) {
-			for(int x=200;x<260;x++) {
+		//paint the side face of the house
+		g.setColor(new Color(139,0,0));
+		for(int y=1;y<230;y++) {
+			for(int x=201;x<260;x++) {
 				if( (200<x && x<260 && y<(0.5*x-100) ) || (200<x && x<260 && y>(0.5*x+100) ) ){
 					continue;
 				}
@@ -245,6 +228,7 @@ public class Drawing2D extends JPanel {
 		}
 	}
 	
+	//use the triangles to draw  the roof of the house
 	public static void drawHouseRoof(Graphics g) {
 		ParametricTriangle tr1 = new ParametricTriangle(
 				new Point3f(100, 280, 0),
@@ -262,6 +246,7 @@ public class Drawing2D extends JPanel {
 		tr2.drawTriangle(g);
 	}
 	
+	//use the rectangle drawing to finish the window
 	public static void drawWindow(Graphics g) {
 		g.setColor(new Color(218,165,32));
 		ParametricLine pl=new ParametricLine(new Point3f(20,100,0),new Point3f(20,150,0));
@@ -304,27 +289,34 @@ public class Drawing2D extends JPanel {
 		p12.drawLine(g);
 	}
 	
+	
+	//use the rectangle to draw it
 	public static void drawDoor(Graphics g) {
-		g.setColor(new Color(72,209,204));
+		//to draw the shape of the door
+		g.setColor(Color.BLACK);
 		ParametricLine pl=new ParametricLine(new Point3f(80,0,0),new Point3f(80,75,0));
 		pl.drawLine(g);
 		ParametricLine p2=new ParametricLine(new Point3f(80,75,0),new Point3f(120,75,0));
 		p2.drawLine(g);
 		ParametricLine p3=new ParametricLine(new Point3f(120,0,0),new Point3f(120,75,0));
 		p3.drawLine(g);
+		
+		//paint the door
+		g.setColor(new Color(72,209,204));
 		for(int y=0;y<75;y++) {
 			for(int x=80;x<120;x++) {
 				g.fillRoundRect(x + 500, 500 - y, 1, 1,1, 0);
 			}
 		}
+		
 		g.setColor(Color.white);
 		ParametricLine p4=new ParametricLine(new Point3f(100,0,0),new Point3f(100,75,0));
 		p4.drawLine(g);
 		
 	}
 	
-	
-	private void drawTips(Graphics g) {
+	//use line to draw the tips of house
+	public static void drawTips(Graphics g) {
 		g.setColor(new Color(255,218,185));
 		for(int y=0;y<20;y++) {
 			for(int x=-130;x<-20;x++) {
@@ -336,6 +328,7 @@ public class Drawing2D extends JPanel {
 				g.fillRoundRect(x + 500, 500 - y, 1, 1,1, 0);
 			}
 		}
+		
 		
 		g.setColor(Color.BLACK);
 		ParametricLine pl=new ParametricLine(new Point3f(-20,0,0),new Point3f(-20,20,0));
@@ -352,10 +345,7 @@ public class Drawing2D extends JPanel {
 		ParametricLine p6=new ParametricLine(new Point3f(-80,0,0),new Point3f(-80,-70,0));
 		p6.drawLine(g);
 		g.drawString("Hello World", 390, 495);
-		
-		
-		
-		
+			
 	}
 	
 	public static void drawRoad(Graphics g) {
