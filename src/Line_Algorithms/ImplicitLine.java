@@ -30,18 +30,45 @@ public class ImplicitLine {
 	 * 	- step 2:find the point which is close to the line segment enough
 	 *  - step 3:draw the point, and these points will gather to form a line 
 	 * */
+	
 	public void drawLine(Graphics g) {
 		//scan horizontally
-		for(int x=(int) this.Start.x;x<this.End.x;x++) {
-			//scan vertically
-			for(int y=(int) this.Start.y;y<this.End.y;y++) {
-				//judge the point is "close" to line segment enough
-				if(this.Distance(new Point3f(x,y,0) , this.Start, this.End)<0.5) {
-					//if so, draw it!
+		float max_x=Math.max(this.Start.x, this.End.x);
+		float min_x=Math.min(this.Start.x, this.End.x);
+		float max_y=Math.max(this.Start.y, this.End.y);
+		float min_y=Math.min(this.Start.y, this.End.y);
+		System.out.println(max_x+"--"+min_x+"--"+max_y+"--"+min_y);
+		
+		if(max_x==min_x || max_y==min_y) {
+			if(max_x==min_x && max_y!=min_y) {
+				System.out.println("max_x==min_x");
+				int x=(int) max_x;
+				for(int y=(int) min_y;y<max_y;y++) {
 					this.setPixel(g, x, y);
+				}
+			}else if(max_y==min_y && max_x!=min_x) {
+				System.out.println("max_y==min_y");
+				int y=(int) max_y;
+				for(int x=(int) min_x;x<max_x;x++) {
+					this.setPixel(g, x, y);
+				}
+			}else {
+				return;
+			}
+			return;
+		}else {
+			for(int x=(int) min_x;x<(int) max_x;x++) {
+				//scan vertically
+				for(int y=(int) min_y;y<max_y;y++) {
+					//judge the point is "close" to line segment enough
+					if(this.Distance(new Point3f(x,y,0) , this.Start, this.End)<2) {
+						//if so, draw it!
+						this.setPixel(g, x, y);
+					}
 				}
 			}
 		}
+		
  
 	}
 

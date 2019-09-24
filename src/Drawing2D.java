@@ -30,7 +30,7 @@ public class Drawing2D extends JPanel {
 	{
 		int width = getWidth(); // width of window in pixels
 		int height = getHeight(); // height of window in pixels
-		System.out.println("Width:"+width+"------"+"Height:"+height);
+		//System.out.println("Width:"+width+"------"+"Height:"+height);
 		// as swing starts at 0 , 0 , will need to modify drawing
 
 		super.paintComponent(g); // call superclass to make panel display
@@ -46,17 +46,17 @@ public class Drawing2D extends JPanel {
 		 * */
 		
 		//Draw a line in a explicit way
-		//ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		
-		//Draw a line in a implicit way
-		//ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); 
-		
-		//Draw a line in a parametric way
-		//ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		
-		//FirstLine.drawLine(g);
-		//SecondLine.drawLine(g);
-		//ThirdLine.drawLine(g);
+//		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+//		
+//		//Draw a line in a implicit way
+//		ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); 
+//		
+//		//Draw a line in a parametric way
+//		ParametricLine ThirdLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+//		
+//		FirstLine.drawLine(g);
+//		SecondLine.drawLine(g);
+//		ThirdLine.drawLine(g);
 		
 		
 		
@@ -64,34 +64,34 @@ public class Drawing2D extends JPanel {
 		 * Goal:
 		 * 	Test the line drawing (Explicit)
 		 * */
-		/*
-		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); 
-		ExplicitLine ThirdLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		ExplicitLine FourthLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
-
-		FirstLine.drawLine(g);
-		SecondLine.drawLine(g);
-		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);
-		*/
+//		
+//		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+//		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0)); 
+//		ExplicitLine ThirdLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+//		ExplicitLine FourthLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
+//
+//		FirstLine.drawLine(g);
+//		SecondLine.drawLine(g);
+//		ThirdLine.drawLine(g);
+//		FourthLine.drawLine(g);
+		
 
 		
 		/*
 		 * Goal:
 		 * 	Test the line drawing (Implicit)
 		 * */
-		/*
-		ImplicitLine FirstLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
-		ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
-		ImplicitLine ThirdLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
-		ImplicitLine FourthLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
-
-		FirstLine.drawLine(g);
-		SecondLine.drawLine(g);
-		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);
-		*/
+		
+//		ImplicitLine FirstLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 100, 0));
+//		ImplicitLine SecondLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(200, 200, 0));
+//		ImplicitLine ThirdLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(75, 200, 0));
+//		ImplicitLine FourthLine = new ImplicitLine(new Point3f(0, 0, 0), new Point3f(25, 200, 0));
+//
+//		FirstLine.drawLine(g);
+//		SecondLine.drawLine(g);
+//		ThirdLine.drawLine(g);
+//		FourthLine.drawLine(g);
+		
 		
 		/*
 		 * Goal:
@@ -113,19 +113,17 @@ public class Drawing2D extends JPanel {
 		/*
 		 * Goal:
 		 * 	Try to draw a rectangle by using Parametric Way
-		 * */
+		 * */	
 		
-		/*
-		ParametricLine FirstLine = new ParametricLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
-		ParametricLine SecondLine = new ParametricLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
-		ParametricLine ThirdLine = new ParametricLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
-		ParametricLine FourthLine = new ParametricLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
+		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
+		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
+		ExplicitLine ThirdLine = new ExplicitLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
+		ExplicitLine FourthLine = new ExplicitLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
 
 		FirstLine.drawLine(g);
 		SecondLine.drawLine(g);
 		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);
-		 */
+		FourthLine.drawLine(g);	 
 		
 		
 		/*
@@ -146,13 +144,13 @@ public class Drawing2D extends JPanel {
 		 * Goal:
 		 * 	Draw a house using following methods
 		 * */
-		drawBackground(g);
-		drawHousebody(g);
-		drawHouseRoof(g);
-		drawWindow(g);
-		drawDoor(g);
-		drawRoad(g);
-		drawTips(g);
+//		drawBackground(g);
+//		drawHousebody(g);
+//		drawHouseRoof(g);
+//		drawWindow(g);
+//		drawDoor(g);
+//		drawRoad(g);
+//		drawTips(g);
 		
 
 	}

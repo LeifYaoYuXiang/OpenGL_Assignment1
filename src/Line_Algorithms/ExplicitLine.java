@@ -91,7 +91,7 @@ public class ExplicitLine {
 				}else {
 					//RUN>0 RISE<0 |RUN|<|RISE|
 					//draw the line step by step in y-direction
-					for(int y=(int) this.Start.y;y<this.End.y;y++) {
+					for(int y=(int) this.End.y;y<this.Start.y;y++) {
 						float slopeVerse=1/this.getSlope();
 						int x= (int) (slopeVerse*y+(this.Start.x-slopeVerse*this.Start.y));
 						this.setPixel(g, x, y);
@@ -109,7 +109,7 @@ public class ExplicitLine {
 				if(-run>=rise) {
 					//RUN<0 RISE>0 |RUN|>|RISE|
 					//draw the line step by step in x-direction
-					for(int x=(int) this.Start.x;x<this.End.x;x++) {
+					for(int x=(int) this.End.x;x<this.Start.x;x++) {
 						int y=(int) (this.getSlope()*x+(this.Start.y-this.getSlope()*this.Start.x));
 						this.setPixel(g, x, y);
 					}
@@ -126,14 +126,14 @@ public class ExplicitLine {
 				if(-run>=-rise) {
 					//RUN<0 RISE<0 |RUN|>|RISE|
 					//draw the line step by step in x-direction
-					for(int x=(int) this.Start.x;x<this.End.x;x++) {
+					for(int x=(int) this.End.x;x<this.Start.x;x++) {
 						int y=(int) (this.getSlope()*x+(this.Start.y-this.getSlope()*this.Start.x));
 						this.setPixel(g, x, y);
 					}
 				}else {
 					//RUN<0 RISE<0 |RUN|<|RISE|
 					//draw the line step by step in y-direction
-					for(int y=(int) this.Start.y;y<this.End.y;y++) {
+					for(int y=(int) this.End.y;y<this.Start.y;y++) {
 						float slopeVerse=1/this.getSlope();
 						int x= (int) (slopeVerse*y+(this.Start.x-slopeVerse*this.Start.y));
 						this.setPixel(g, x, y);
@@ -141,15 +141,16 @@ public class ExplicitLine {
 				}
 			}else {
 				//rise==0
-				for(int x=(int) this.Start.x;x<this.End.x;x++) {
-					System.out.println("<"+x+","+this.Start.y+">");
+				for(int x=(int) this.End.x;x<this.Start.x;x++) {
 					this.setPixel(g, x, (int) this.Start.y);
 				}
 			}	
 		}else {
 			//run==0
 			if(rise!=0) {
-				for(int y=(int) this.Start.y;y<this.End.y;y++) {
+				int min_y=(int) Math.min(this.Start.y,this.End.y);
+				int max_y=(int) Math.max(this.Start.y, this.End.y);
+				for(int y=min_y;y<max_y;y++) {
 					this.setPixel(g, (int) this.Start.x, y);
 				}
 			}else {
