@@ -115,15 +115,15 @@ public class Drawing2D extends JPanel {
 		 * 	Try to draw a rectangle by using Parametric Way
 		 * */	
 		
-		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
-		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
-		ExplicitLine ThirdLine = new ExplicitLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
-		ExplicitLine FourthLine = new ExplicitLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
-
-		FirstLine.drawLine(g);
-		SecondLine.drawLine(g);
-		ThirdLine.drawLine(g);
-		FourthLine.drawLine(g);	 
+//		ExplicitLine FirstLine = new ExplicitLine(new Point3f(0, 0, 0), new Point3f(0, 300, 0));
+//		ExplicitLine SecondLine = new ExplicitLine(new Point3f(0, 300, 0), new Point3f(300, 300, 0));
+//		ExplicitLine ThirdLine = new ExplicitLine(new Point3f(300, 300, 0), new Point3f(300, 0, 0));
+//		ExplicitLine FourthLine = new ExplicitLine(new Point3f(300, 0, 0), new Point3f(0, 0, 0));
+//
+//		FirstLine.drawLine(g);
+//		SecondLine.drawLine(g);
+//		ThirdLine.drawLine(g);
+//		FourthLine.drawLine(g);	 
 		
 		
 		/*
@@ -144,13 +144,13 @@ public class Drawing2D extends JPanel {
 		 * Goal:
 		 * 	Draw a house using following methods
 		 * */
-//		drawBackground(g);
-//		drawHousebody(g);
-//		drawHouseRoof(g);
-//		drawWindow(g);
-//		drawDoor(g);
-//		drawRoad(g);
-//		drawTips(g);
+		drawBackground(g);
+		drawHousebody(g);
+		drawHouseRoof(g);
+		drawWindow(g);
+		drawDoor(g);
+		drawRoad(g);
+		drawTips(g);
 		
 
 	}
