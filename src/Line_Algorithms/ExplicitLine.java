@@ -148,6 +148,7 @@ public class ExplicitLine {
 		}else {
 			//run==0
 			if(rise!=0) {
+				//DRAW THE VERTICAL LINE
 				int min_y=(int) Math.min(this.Start.y,this.End.y);
 				int max_y=(int) Math.max(this.Start.y, this.End.y);
 				for(int y=min_y;y<max_y;y++) {

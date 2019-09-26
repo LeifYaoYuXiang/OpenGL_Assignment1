@@ -32,22 +32,20 @@ public class ImplicitLine {
 	 * */
 	
 	public void drawLine(Graphics g) {
-		//scan horizontally
 		float max_x=Math.max(this.Start.x, this.End.x);
 		float min_x=Math.min(this.Start.x, this.End.x);
 		float max_y=Math.max(this.Start.y, this.End.y);
 		float min_y=Math.min(this.Start.y, this.End.y);
-		System.out.println(max_x+"--"+min_x+"--"+max_y+"--"+min_y);
-		
+		//if this line is horizontally or vertically
 		if(max_x==min_x || max_y==min_y) {
+			//if this line is vertically 
 			if(max_x==min_x && max_y!=min_y) {
-				System.out.println("max_x==min_x");
 				int x=(int) max_x;
 				for(int y=(int) min_y;y<max_y;y++) {
 					this.setPixel(g, x, y);
 				}
+			//else if the line is horizontally
 			}else if(max_y==min_y && max_x!=min_x) {
-				System.out.println("max_y==min_y");
 				int y=(int) max_y;
 				for(int x=(int) min_x;x<max_x;x++) {
 					this.setPixel(g, x, y);
@@ -57,6 +55,7 @@ public class ImplicitLine {
 			}
 			return;
 		}else {
+			//scan horizontally
 			for(int x=(int) min_x;x<(int) max_x;x++) {
 				//scan vertically
 				for(int y=(int) min_y;y<max_y;y++) {

@@ -89,13 +89,13 @@ public class ParametricTriangle {
 	public void setPixel(Graphics g, int x, int y, float R, float G, float B) {
 		//whether to draw it or not?
 		if(!this.al) {
-			R=0;
+			R=1;
 		}
 		if(!this.be) {
-			G=0;
+			G=1;
 		}
 		if(!this.ga) {
-			B=0;
+			B=1;
 		}
 		Color pixelColour = new Color(R, G, B);
 		g.setColor(pixelColour);
