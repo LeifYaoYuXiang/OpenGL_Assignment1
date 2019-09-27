@@ -151,6 +151,7 @@ public class Drawing2D extends JPanel {
 		drawWindow(g);
 		drawDoor(g);
 		drawTips(g);
+	
 	}
 
 	
@@ -335,5 +336,6 @@ public class Drawing2D extends JPanel {
 		g.setColor(Color.black);
 		g.drawString("My House", 400, 495);		
 	}
+	
 
 }
