@@ -12,31 +12,33 @@ public class ParametricTriangle {
 	Point3f B;
 	Point3f C;
 	
-	//the following boolean values to determine whether render the color interpolation or not
+	//the following sequences values is used to determine 
+	//whether interval of color interpolation
+	//the default is 0-255
+	
 	//variable al-->alpha;
 	//variable be-->beta;
-	//variable ga-->gamma
-	boolean al=true;
-	boolean be=true;
-	boolean ga=true;
+	//variable ga-->gamma;
+	int[] alpha= {0,255};
+	int[] beta= {0,255};
+	int[] gamma= {0,255};
 
-	//Constructor: without color coefficient
+	//Constructor: without color interval coefficient
 	public ParametricTriangle(Point3f a, Point3f b, Point3f c) {
 		A = a;
 		B = b;
 		C = c;
 	}
-	
-	//Constructor: with color coefficient
-	public ParametricTriangle(Point3f a, Point3f b, Point3f c,boolean alpha,boolean beta, boolean gamma) {
+
+	//Constructor: with color interval coefficient
+	public ParametricTriangle(Point3f a, Point3f b, Point3f c,int[] alpha,int[] beta,int[] gamma) {
 		A = a;
 		B = b;
 		C = c;
-		this.al=alpha;
-		this.be=beta;
-		this.ga=gamma;
+		this.alpha=alpha;
+		this.beta=beta;
+		this.gamma=gamma;
 	}
-	
 
 	/*
 	 * Goal:
@@ -87,17 +89,15 @@ public class ParametricTriangle {
 	 * 	use different color to different pixel according to the distance to the line
 	 * */
 	public void setPixel(Graphics g, int x, int y, float R, float G, float B) {
-		//whether to draw it or not?
-		if(!this.al) {
-			R=1;
-		}
-		if(!this.be) {
-			G=1;
-		}
-		if(!this.ga) {
-			B=1;
-		}
-		Color pixelColour = new Color(R, G, B);
+		/*mechanism:
+		 * 	mapping the the default color interval to the defined color interval;
+		 * 
+		 * */
+		
+		float temp_r=(float) ((this.alpha[0]+(this.alpha[1]-this.alpha[0])*R)/255);
+		float temp_g=(float) ((this.beta[0]+(this.beta[1]-this.beta[0])*G)/255);
+		float temp_b=(float) ((this.gamma[0]+(this.gamma[1]-this.gamma[0])*B)/255);
+		Color pixelColour = new Color(temp_r, temp_g, temp_b);
 		g.setColor(pixelColour);
 		g.fillRoundRect(x + 500, 500 - y, 1, 1,1, 0);
 	}
